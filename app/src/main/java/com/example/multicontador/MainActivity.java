@@ -29,23 +29,99 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.augmentarElContador.setOnClickListener(new View.OnClickListener() {
+        binding.contadorDeClics1dere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                contador=contador1+contador2+contador3+contador4;
-                binding.contadorDeClicscentral.setText("Hay " + contador + " Clics");
-
                 contador1++;
+                contador=contador1+contador2+contador3+contador4;
                 binding.contadorDeClics1izq.setText("Hay "+ contador1 + " Clics");
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
 
+            }
+        });
+        binding.contadorDeClics2dere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 contador2++;
-                binding.contadorDeClics2izq.setText("Hay "+ contador2 + " Clics");
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClics2izq.setText("Hay "+ contador2 + "Clics");
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
 
+
+            }
+        });
+        binding.contadorDeClics3dere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 contador3++;
-                binding.contadorDeClics4izq.setText("Hay "+ contador3 + " Clics");
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClics3izq.setText("Hay "+ contador3 + "Clics");
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
 
+
+            }
+        });
+        binding.contadorDeClics4dere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 contador4++;
-                binding.contadorDeClics4izq.setText("Hay "+ contador4 + " Clics");
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClics4izq.setText("Hay "+ contador4 + "Clics");
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
+
+
+            }
+        });
+        binding.ResetAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               contador=0;
+               contador1=0;
+               contador2=0;
+               contador3=0;
+               contador4=0;
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
+                binding.contadorDeClics1izq.setText("Hay "+ contador1 + " Clics");
+                binding.contadorDeClics2izq.setText("Hay "+ contador2 + "Clics");
+                binding.contadorDeClics3izq.setText("Hay "+ contador3 + "Clics");
+                binding.contadorDeClics4izq.setText("Hay "+ contador4 + "Clics");
+            }
+        });
+        binding.Reset1dere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contador1=0;
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
+                binding.contadorDeClics1izq.setText("Hay "+ contador1 + " Clics");
+            }
+        });
+        binding.Reset2dere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contador2=0;
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
+                binding.contadorDeClics2izq.setText("Hay "+ contador2 + "Clics");
+            }
+        });
+        binding.Reset3dere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contador3=0;
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
+                binding.contadorDeClics3izq.setText("Hay "+ contador3 + "Clics");
+            }
+        });
+        binding.Reset4dere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contador4=0;
+                contador=contador1+contador2+contador3+contador4;
+                binding.contadorDeClicscentral.setText("Hay "+ contador + " Clics");
+                binding.contadorDeClics4izq.setText("Hay "+ contador4 + "Clics");
             }
         });
     }
